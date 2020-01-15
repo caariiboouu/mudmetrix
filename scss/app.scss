@@ -5,7 +5,8 @@
     src:url("/fonts/OpenSans-Regular.woff2") format("woff2"),
         url("/fonts/OpenSans-Regular.woff") format("woff"),
         url("/fonts/OpenSans-Regular.otf") format("opentype");
-    font-style:normal;font-weight:400;
+    font-style:normal;
+    font-weight:400;
 }
 
 @font-face {
@@ -13,7 +14,8 @@
     src:url("/fonts/OpenSans-Bold.woff2") format("woff2"),
         url("/fonts/OpenSans-Bold.woff") format("woff"),
         url("/fonts/OpenSans-Bold.otf") format("opentype");
-    font-style:normal;font-weight:400;
+    font-style:normal;
+    font-weight:400;
 }
 
 @import 'settings';
@@ -78,3 +80,23 @@
 // Motion UI
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+
+
+
+// theme styles
+#logo {
+  max-width:16rem;
+  width:100%;
+}
+
+.pagetitle {
+  margin:1rem 0 1rem 0;
+}
+
+.top-bar a {
+  font-size:1.5rem;
+  font-family:"Open Sans Bold";
+  font-style:normal;
+  font-weight:400;
+}

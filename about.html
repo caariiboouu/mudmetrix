@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
   </head>
-  <body data-aos="fade-in">
+  <body>
 
-    <div class="top-bar" data-aos="fade-down">
+    <div class="top-bar" data-aos="fade-in">
       <div class="top-bar-left">
-        <a href="/"><img style="max-width:10rem;" src="img/mmoriginal.svg" alt="mud metrix logo"></a>
+        <a href="/"><img id="logo" src="img/mmoriginal.svg" alt="mud metrix logo"></a>
       </div>
       <div class="top-bar-right">
         <ul class="menu">
@@ -24,10 +24,11 @@
       </div>
     </div>
 
-    <div class="grid-container">
+    <div class="grid-container" data-aos="fade-in">
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
-          <h1>About</h1>
+          <h1 class="pagetitle">About</h1>
+          <h3>company history</h3>
 
         </div>
       </div>
@@ -40,7 +41,9 @@
     <script src="node_modules/aos/dist/aos.js"></script>
     <script src="js/app.js"></script>
     <script>
-      AOS.init();
+      $(document).ready(function(){
+        AOS.init();
+      });
     </script>
   </body>
 </html>
