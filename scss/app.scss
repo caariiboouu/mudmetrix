@@ -110,6 +110,12 @@ section {
   font-family:"Open Sans Bold";
   font-style:normal;
   font-weight:400;
+
+  .top-bar-right {
+    a {
+      line-height: 5rem;
+    }
+  }
 }
 .topback {
   background-color: #efeee5;
