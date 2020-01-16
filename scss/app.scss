@@ -85,18 +85,116 @@
 
 
 // theme styles
+body {
+  max-width: 124rem;
+  margin: auto;
+}
+section {
+  margin:2rem auto;
+}
+#introbox {
+  height: 44vw;
+  max-height: 882px;
+  margin:auto;
+  text-align: center;
+}
 #logo {
   max-width:16rem;
   width:100%;
 }
-
 .pagetitle {
   margin:1rem 0 1rem 0;
 }
-
 .top-bar a {
   font-size:1.5rem;
   font-family:"Open Sans Bold";
   font-style:normal;
   font-weight:400;
+}
+.topback {
+  background-color: #efeee5;
+  width:100%;
+}
+.width-control {
+  max-width:75rem;
+  margin:auto;
+}
+.spacedcallout {
+  margin: 3rem auto;
+  text-align: center;
+}
+.outlinecallout {
+  width:60%;
+  margin: 2rem auto 0.5rem;
+  padding: 1rem 1rem 0.25rem;
+  border: .1rem solid #efeee5;
+
+  @media screen and (max-width: 1024px) {
+    width:90%;
+  }
+}
+
+#mapimg {
+  max-width:4.6rem;
+}
+
+#mudmetrix-footer-contact-details-container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: rem-calc(0);
+  background-color: $white;
+
+  #mudmetrix-footer-contact-details {
+    @include grid-row();
+    color:$dark-gray;
+    padding: rem-calc(20) 0;
+    a {
+      color:$dark-gray !important;
+    }
+
+    .footer-left {
+      @include breakpoint(small) {
+        @include grid-column(12);
+        li {
+          display: block;
+        }
+        text-align: center;
+      }
+      @include breakpoint(medium) {
+        @include grid-column(6);
+        text-align: left;
+      }
+      @include breakpoint(large) {
+        @include grid-column(8);
+        ul {
+          margin-bottom: 0;
+        }
+        li {
+          display: inline-block
+        }
+      }
+      font-size: 0.9rem;
+      .fa {
+        padding: 0 0.4rem;
+      }
+    }
+    .footer-right {
+      @include breakpoint(small) {
+        @include hide-for-only(small);
+      }
+      @include breakpoint(medium) {
+        @include grid-column(6);
+      }
+      @include breakpoint(large) {
+        @include grid-column(4);
+        text-align: right;
+        ul {padding-top: 1.6rem;}
+
+
+      }
+      font-size: 0.9rem;
+      .fa {padding: 0 0.4rem;}
+    }
+  }
 }
