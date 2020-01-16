@@ -129,7 +129,7 @@ section {
   padding: 1rem 1rem 0.25rem;
   border: .1rem solid #efeee5;
 
-  @media screen and (max-width: 1024px) {
+  @include breakpoint(small) {
     width:90%;
   }
 }
@@ -143,7 +143,8 @@ section {
   width: 100%;
   margin: 0 auto;
   margin-top: rem-calc(0);
-  background-color: $white;
+  padding:2rem 0;
+  background-color: #18355e;
 
   #mudmetrix-footer-contact-details {
     @include grid-row();
@@ -155,6 +156,10 @@ section {
 
     .footer-left {
       @include breakpoint(small) {
+        ul {
+          margin-bottom: 0;
+          margin-left: 0;
+        }
         @include grid-column(12);
         li {
           display: block;
@@ -169,6 +174,7 @@ section {
         @include grid-column(8);
         ul {
           margin-bottom: 0;
+          margin-left: 0;
         }
         li {
           display: inline-block
