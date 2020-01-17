@@ -91,6 +91,9 @@ body {
 }
 section {
   margin:2rem auto;
+  .spacedimage {
+    margin:1rem auto;
+  }
 }
 #introbox {
   height: 44vw;
@@ -99,20 +102,48 @@ section {
   text-align: center;
 }
 #logo {
-  max-width:16rem;
+  max-width:10rem;
   width:100%;
+  @include breakpoint(large) {
+    max-width:16rem;
+  }
 }
 .pagetitle {
   margin:1rem 0 1rem 0;
 }
-.top-bar a {
-  font-size:1.5rem;
-  font-family:"Open Sans Bold";
-  font-style:normal;
-  font-weight:400;
+.top-bar {
+  .top-bar-left,
+  .top-bar-right {
+    flex: 0 0 50%;
+    @include breakpoint(medium) {
+      flex: 0 1 auto;
+    }
+  }
 
   .top-bar-right {
+    .menu {
+      text-align:right;
+      float:right;
+      display:table;
+      @include breakpoint(medium) {
+        float:none;
+        text-align:left;
+        display:flex;
+      }
+    }
     a {
+      line-height: 1rem;
+      @include breakpoint(medium) {
+        line-height: 5rem;
+      }
+    }
+  }
+  a {
+    font-size:1.1rem;
+    font-family:"Open Sans Bold";
+    font-style:normal;
+    font-weight:400;
+    @include breakpoint(medium) {
       line-height: 5rem;
     }
   }
