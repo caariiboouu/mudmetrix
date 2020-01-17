@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "foundation-cli": "^2.2.5",
     "foundation-sites": "^6.6.0",
     "jquery": "^3.4.1",
     "motion-ui": "~2.0.0",
