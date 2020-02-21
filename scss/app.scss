@@ -96,22 +96,55 @@ section {
   }
 }
 #introbox {
-  height: 44vw;
-  max-height: 882px;
-  margin:auto;
-  text-align: center;
-}
-#logo {
-  max-width:10rem;
-  width:100%;
-  @include breakpoint(large) {
-    max-width:16rem;
+  background: rgb(248,247,240);
+  background: linear-gradient(165deg, rgba(244,251,255,1) 0%, rgba(32,87,130,1) 100%);
+  margin: auto;
+  padding: 12vw 2vw 6vw;
+  text-align: right;
+
+  h4 {
+    margin-top: 3vw;
+    font-size:2vw;
+    color:#1E1E1C;
   }
+  h1 {
+    letter-spacing: .05vw;
+    line-height: 6vw;
+    font-size:6.5vw;
+    color:#1E1E1C;
+  }
+  img {
+    width:100%;
+  }
+}
+
+.button,
+.button.disabled,
+.button[disabled],
+.button.disabled:hover,
+.button[disabled]:hover,
+.button.disabled:focus,
+.button[disabled]:focus {
+  color: #efeee5;
+}
+
+#logo {
+  width:100%;
 }
 .pagetitle {
   margin:1rem 0 1rem 0;
 }
 .top-bar {
+  background-color: #FFFEF4;
+  position: relative;
+  z-index: 100;
+  border-bottom: .8vw solid #9f9857;
+
+  ul {
+    background-color:#FFFEF4;
+  }
+
+
   .top-bar-left,
   .top-bar-right {
     flex: 0 0 50%;
@@ -134,7 +167,7 @@ section {
     a {
       line-height: 1rem;
       @include breakpoint(medium) {
-        line-height: 5rem;
+        line-height: 2rem;
       }
     }
   }
@@ -147,7 +180,63 @@ section {
       line-height: 5rem;
     }
   }
+
 }
+
+.logoSandwich {
+  .logoSandwichLogo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18vw;
+    z-index: 250;
+    @media screen and (max-width: 820px) {
+      width:28vw;
+    }
+    @media screen and (max-width: 600px) {
+      width:42vw;
+    }
+    @media screen and (max-width: 400px) {
+      width:53vw;
+    }
+
+    img {
+      margin: 2.5vw 2vw;
+    }
+  }
+  .logoSandwichTop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32vw;
+    z-index: 200;
+      @media screen and (max-width: 820px) {
+        width:46vw;
+      }
+      @media screen and (max-width: 600px) {
+        width:66vw;
+      }
+
+    .st0{fill:#FFFEF4;}
+  }
+  .logoSandwichBottom {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 34vw;
+    margin-left: -0.6vw;
+    z-index: 50;
+      @media screen and (max-width: 820px) {
+        width:48vw;
+      }
+      @media screen and (max-width: 600px) {
+        width:68vw;
+      }
+
+    .st0{fill:#9F9857;}
+  }
+}
+
 .topback {
   background-color: #efeee5;
   width:100%;
